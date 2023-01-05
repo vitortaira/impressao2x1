@@ -1,0 +1,28 @@
+pgs.impressao <- 
+  function(final, inicial = 1){
+    library(tidyverse)
+    
+    soma <- c(replicate(500, c(1,3)))
+    
+    indice.frente <- c()
+    indice.frente[1] <- 1
+    for (i in 1:length(soma)) { 
+      indice.frente[i+1] <- indice.frente [i] + soma[i]
+    }
+    
+    indice.verso  <- indice.frente + 2
+    
+    if(is.numeric(final) == F | is.numeric(inicial) == F) {
+      stop('Os argumentos "final" e "inicial" devem ser numéricos.')
+    } else {
+    if(final < inicial) {
+      stop('A página final deve ser maior do que a página inicial.')
+    } else {
+    pgs.frente  <- drop_na(as.data.frame(as.vector(inicial:final)[indice.frente]))
+    pgs.frente  <- paste0(unlist(pgs.frente), collapse = ',')
+    pgs.verso   <- drop_na(as.data.frame(as.vector(inicial:final)[indice.verso]))
+    pgs.verso   <- paste0(unlist(pgs.verso), collapse = ',')
+  return(list(Frente = pgs.frente, Verso = pgs.verso))
+           }
+           }
+  }
