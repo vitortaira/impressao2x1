@@ -1,4 +1,4 @@
-# Páginas que devem ser impressas
+# Páginas a serem imprimidas
 
 Gosto de ler textos em papel físico, mas a fim de tentar reduzir meu consumo de papel, costumo imprimir de um modo particular. Uso a página física em modo paisagem, e imprimo de modo que ela contenha 2 páginas virtuais em modo retrato. Dessa forma, imprimindo frente e verso cada folha física acaba ficando com 4 páginas virtuais.
 
